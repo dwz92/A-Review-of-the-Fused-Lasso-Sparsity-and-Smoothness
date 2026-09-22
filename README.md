@@ -21,6 +21,8 @@ This repo contains a review of Tibshirani, Saunders, Rosset, Zhu & Knight (2005)
 │   ├── Prostate Cancer PSA 4-10/
 │   └── Prostate Cancer PSA Greater 10/
 └── Tibshirani-JRSSB05.pdf   # original paper (Tibshirani et al., 2005)
+└── supplementary/
+    └── fig8_realdata_coefficients.png                    # optional: real-data (Fig. 8) replication
 ```
 
 ## Data
@@ -105,6 +107,16 @@ The publicly available data set has only **518** usable features after the paper
 The central qualitative finding replicates: the fused lasso recovers far more of the true nonzero coefficients than the lasso (higher sensitivity) at a modest specificity cost, matching the paper's conclusion that ordering-aware regularization better captures block-structured signals. Test errors run higher in our replication mainly because of the smaller feature set (518 vs. ~1000); see the report for full discussion.
 
 `fig3_coefficient_plot.png` shows lasso vs. fused lasso coefficient estimates for a representative run, with the true nonzero m/z block shaded in yellow.
+
+## Supplementary (optional, not part of the required simulation)
+
+`supplementary/fig8_realdata_coefficients.png` replicates Figure 8 of the paper, the real prostate-cancer data analysis from Section 7, not the simulation study.
+The assignment only required reproducing one simulation setting, so this figure was left out of the final report, but it's kept here as a sanity check.
+
+- (a) Average spectra for normal vs. prostate-cancer patients, reproducing Fig. 1 of the paper.
+- (b) Non-zero coefficients from fitting the lasso and fused lasso directly to the real data (not simulated): the lasso selects 48 sites (red dots) while the fused lasso selects 220 sites (black line), spreading weight across neighboring m/z values — the same qualitative pattern the paper reports in Fig. 8.
+
+This uses the real disease labels as the response (unlike the simulation, where labels are irrelevant), so it is not comparable to the Table 3 results above and is not needed to reproduce the report.
 
 ## Reference
 
