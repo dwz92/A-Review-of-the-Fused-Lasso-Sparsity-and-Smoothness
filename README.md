@@ -20,7 +20,7 @@ This repo contains a review of Tibshirani, Saunders, Rosset, Zhu & Knight (2005)
 │   ├── No Evidence of Disease PSA Less 1/
 │   ├── Prostate Cancer PSA 4-10/
 │   └── Prostate Cancer PSA Greater 10/
-└── Tibshirani-JRSSB05.pdf   # original paper (Tibshirani et al., 2005)
+├── Tibshirani-JRSSB05.pdf   # original paper (Tibshirani et al., 2005)
 └── supplementary/
     └── fig8_realdata_coefficients.png                    # optional: real-data (Fig. 8) replication
 ```
